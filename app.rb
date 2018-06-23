@@ -7,7 +7,7 @@ get '/' do
 end
 
 get '/play' do
-  cmd = 'paplay /usr/share/mint-artwork-cinnamon/sounds/login.oga'
+  cmd = 'paplay public/service_bell.ogg'
   pid = spawn(cmd)
   Process.detach(pid)
   redirect to '/'
